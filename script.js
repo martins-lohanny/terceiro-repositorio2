@@ -1,9 +1,16 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');
+const campoSenha =querySelector("campo-senha");
+const chekbox = document.querySelectorALL('.checkbox');
+const botoes = document.querySelectorAll('.parametro-senha__botao');
+const forcaSenha = document.querySelector('.forca');
+const letrasMaiusculas= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letrasMinusculas= 'abcdefghijklmnopqrstuvwxyz';
+const numeros= '0123456789';
+const simbolos= '!@%*?';
 let tamanhoSenha = 12;
-
 numeroSenha.textContent = tamanhoSenha;
 
-const botoes = document.querySelectorAll('.parametro-senha__botao');
+
 
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
@@ -25,12 +32,6 @@ function aumentaTamanho(){
 }
 
 
-const campoSenha =querySelector("campo-senha");
-
-const letrasMaiusculas= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const letrasMinusculas= 'abcdefghijklmnopqrstuvwxyz';
-const numeros= '0123456789';
-const simbolos= '!@%*?';
 
 function geraSenha() {
     let alfabeto= '';
@@ -57,4 +58,5 @@ function geraSenha() {
         senha = senha + alfabeto[numeroAleatorio];
     }
 }
+
 
